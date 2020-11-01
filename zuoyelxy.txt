@@ -1,0 +1,51 @@
+//level0
+public class Main {
+    public static void main(String[] args) {
+        int n = 1;
+        while (n <= 100) {
+            n ++;
+            if(n==50) break;
+        }
+        n=1;
+        do{
+            n++;
+            if (n==50) break;
+        }while(n<=100);
+        for(n=1;n<=100;n++){
+            if(n==50) break;
+        }
+    }
+}   //使用while，do...while,for循环1-100的数字，在50的时候跳出循环一次循环（不打印50）
+//level1
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("请输入数字:");
+        int num=scanner.nextInt();
+        if(num<0) num=-num;
+        boolean b = num%2==0;
+        System.out.println(b);
+    }
+}//从键盘中输入数字，判断是否是偶数，输出布朗值
+
+//level2
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+        String str="acbdw,12695,47AasIDX";
+        String[] strArr=StringUtils.spilt(str,",");
+        char[] char1 = strArr.toCharArray();
+        for(int i=0;i< strArr.length;i++){
+            if(char[i]>=48 && char[i]<=57){
+                continue;
+            }
+            else{
+                if(char[i]>=65 && char[i]<97)
+                    char[i]=32;
+            }
+            }
+
+        }
+    }
