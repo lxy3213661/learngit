@@ -1,0 +1,94 @@
+package com.company.animal;
+
+public class Main {
+    public static void main(String[]args){
+        int age=18;
+        char sex='雄';
+        int n=0 ,b=10;
+        String name1="huahua";
+        String name2="beibei";
+        cat huahua= new cat();
+        huahua.eat();
+        huahua.sleep();
+        huahua.setAge(2);
+        dog beibei= new dog();
+        beibei.run(b);
+        beibei.run();
+        beibei.sleep();
+    }
+}
+package com.company.animal;
+
+public class animal {
+    String name;
+    char sex;
+    private int age;
+
+    void setAge(int age) {
+        this.age = age;
+    }
+
+    int getAge() {
+        return this.age;
+    }
+
+    void setSex(char sex) {
+        this.sex = sex;
+    }
+
+    char getSex() {
+        return this.sex;
+    }
+
+    void sleep() {
+        System.out.println("Some animals maybe sleeping on the ground\n");
+    }
+
+    void eat() {
+        System.out.println("Some animals eat meat and vegetables\n");
+    }
+
+}
+package com.company.animal;
+
+final class cat extends animal {
+    private int weight;
+    private int height;
+    void setWeight(int weight){
+        this.weight=weight;
+    }
+    private int getWeight(){
+        return this.weight;
+    }
+
+    @Override
+    void sleep() {
+        super.sleep();
+    }
+    @Override
+    void eat(){
+        System.out.printf("cats usually like sleep on the back\n");
+    }
+
+
+
+}
+package com.company.animal;
+
+public class dog extends animal {
+    @Override
+    void sleep() {
+        System.out.println("dogs like sleeping on the ground\n");
+    }
+
+    void run() {
+        System.out.printf("dogs like crossing running\n");
+    }
+
+    void run(int n) {
+        System.out.println("Run with your tail up when they are active\n");
+    }
+}
+
+
+
